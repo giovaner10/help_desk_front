@@ -10,6 +10,10 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { TecnicoListComponent } from './components/tecnico/tecnico-list/tecnico-list.component';
 import { LoginComponentComponent } from './components/login/login-component/login-component.component';
+import { ToastrModule } from 'ngx-toastr';
+import { timeout } from 'rxjs';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,13 +23,23 @@ import { LoginComponentComponent } from './components/login/login-component/logi
     HeaderComponent,
     TecnicoListComponent,
     LoginComponentComponent,
-    
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule, 
-    MaterialModule
+    BrowserAnimationsModule,
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    ToastrModule.forRoot({
+      timeOut: 4000,
+      closeButton: true,
+      progressBar: true
+    }
+
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

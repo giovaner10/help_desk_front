@@ -25,10 +25,15 @@
                 <i class="material-icons">code</i>
                 Github
              </a>
+
+             <a mat-list-item (click)="logout()">
+              <i class="material-icons">logout</i>
+              Logout
+           </a>
         </mat-nav-list>
-   
+
     </mat-drawer>
-  
+
     <div class="example-sidenav-content">
       <app-header></app-header>
 
@@ -37,5 +42,5 @@
       </button>
       <router-outlet></router-outlet>
     </div>
-  
+
   </mat-drawer-container>
