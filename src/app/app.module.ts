@@ -14,6 +14,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { timeout } from 'rxjs';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
+import { AuthInterceptorPorvider } from './interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,7 @@ import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 
     )
   ],
-  providers: [],
+  providers: [AuthInterceptorPorvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
