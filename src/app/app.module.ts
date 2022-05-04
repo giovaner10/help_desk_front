@@ -15,6 +15,7 @@ import { timeout } from 'rxjs';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptorPorvider } from './interceptors/auth.interceptor';
+import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecnico-create.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { AuthInterceptorPorvider } from './interceptors/auth.interceptor';
     HeaderComponent,
     TecnicoListComponent,
     LoginComponentComponent,
+    TecnicoCreateComponent,
 
   ],
   imports: [
