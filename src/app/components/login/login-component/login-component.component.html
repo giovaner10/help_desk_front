@@ -1,1 +1,36 @@
-<p>login-component works!</p>
+<div class="container">
+    <form class="form mat-elevation-z8">
+ 
+       <h1>Help Desk - Dicas de um DEV</h1>
+ 
+       <img src="assets/img/login-image.svg" alt="Help Desk - Dicas de um DEV">
+ 
+       <mat-form-field class="full-width" appearance="outline">
+          <mat-label>E-mail</mat-label>
+          <input 
+          [formControl]="username"
+          required
+          [(ngModel)]="creds.username" 
+          name="username" 
+          matInput 
+          placeholder="Ex. username_10">
+          <mat-icon matSuffix>Username</mat-icon>
+       </mat-form-field>
+ 
+       <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Senha</mat-label>
+          <input 
+          [formControl]="password"
+          required
+          [(ngModel)]="creds.senha" 
+          name="password" 
+          type="password" 
+          matInput 
+          placeholder="Ex. 123">
+          <mat-icon matSuffix>password</mat-icon>
+       </mat-form-field>
+ 
+       <button (click)="logar()" [disabled]="!validaCampos()" class="full-width mat-elevation-z4" mat-stroked-button color="primary">Login</button>
+    </form>
+ 
+ </div>
