@@ -17,6 +17,8 @@ import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptorPorvider } from './interceptors/auth.interceptor';
 import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecnico-create.component';
 import { NgxMaskModule } from 'ngx-mask';
+import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecnico-update.component';
+import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecnico-delete.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { NgxMaskModule } from 'ngx-mask';
     TecnicoListComponent,
     LoginComponentComponent,
     TecnicoCreateComponent,
+    TecnicoUpdateComponent,
+    TecnicoDeleteComponent,
 
   ],
   imports: [

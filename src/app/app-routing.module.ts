@@ -6,6 +6,8 @@ import { LoginComponentComponent } from './components/login/login-component/logi
 import { NavComponent } from './components/nav/nav.component';
 import { TecnicoListComponent } from './components/tecnico/tecnico-list/tecnico-list.component';
 import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecnico-create.component';
+import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecnico-update.component';
+import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecnico-delete.component';
 
 const routes: Routes = [
 {
@@ -29,8 +31,17 @@ const routes: Routes = [
     {
       path: "tecnicos/create",
       component: TecnicoCreateComponent
+    },
+    {
+      path: "tecnicos/update/:id",
+      component: TecnicoUpdateComponent
+    },
+    {
+      path: "tecnicos/delete/:id",
+      component: TecnicoDeleteComponent
     }
   ]
+
 }
 
 ];
