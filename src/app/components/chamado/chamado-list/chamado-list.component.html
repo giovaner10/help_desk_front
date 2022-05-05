@@ -10,10 +10,10 @@
    </mat-form-field>
 
    <mat-radio-group color="primary">
+    <mat-radio-button (click)="findAll()" checked value="3">TODOS</mat-radio-button>
      <mat-radio-button (click)="orderByStatus(0)" value="0">ABERTO</mat-radio-button>
      <mat-radio-button (click)="orderByStatus(1)" value="1">ANDAMENTO</mat-radio-button>
      <mat-radio-button (click)="orderByStatus(2)" value="2">ENCERRADO</mat-radio-button>
-     <mat-radio-button (click)="findAll()" value="3">TODOS</mat-radio-button>
 
    </mat-radio-group>
 
