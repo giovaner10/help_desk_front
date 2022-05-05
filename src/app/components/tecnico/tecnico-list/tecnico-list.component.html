@@ -37,16 +37,19 @@
         <!-- Symbol Column -->
         <ng-container matColumnDef="acoes">
           <th mat-header-cell *matHeaderCellDef> Ações </th>
-          <td mat-cell *matCellDef="let element"> Ações </td>
-        </ng-container>
+          <td mat-cell *matCellDef="let element">
+             <a routerLink="update/{{ element.id }}">
+                <i class="material-icons edit">edit</i>
+             </a>
+             <a routerLink="delete/{{ element.id }}">
+                <i class="material-icons delete">delete</i>
+             </a>
+          </td>
+       </ng-container>
 
-
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
 
-    <mat-paginator [pageSizeOptions]="[5, 10, 20]"
-                   showFirstLastButtons
-                   aria-label="Select page of periodic elements">
-    </mat-paginator>
-  </div>
+    <mat-paginator [pageSizeOptions]="[5, 2, 10, 20, 50, 100]" showFirstLastButtons></mat-paginator>
+ </div>
