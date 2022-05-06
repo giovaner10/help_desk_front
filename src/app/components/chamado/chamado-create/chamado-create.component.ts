@@ -54,10 +54,20 @@ export class ChamadoCreateComponent implements OnInit {
     this.chamadoService.create(this.chamado).subscribe(resposta => {
       this.toastService.success('Chamado criado com sucesso', 'Novo chamado');
       this.router.navigate(['chamados']);
-    }, ex => {
-      console.log(ex);
+    }, ex =>  {
+      if(ex.error.errors) {
+        ex.error.errors.forEach((element: { message: string | undefined; }) => {
+          this.toastService.error(element.message);
+        });
+      } else {
+        if(Number.parseInt(ex.error.status) == 403){
+          this.toastService.error("Acesso a essa operação negado, sem permissão.");
 
-      this.toastService.error(ex.error.error);
+        }else{
+        this.toastService.error(ex.error.message);
+        }
+      }
+
     })
   }
 
@@ -78,6 +88,6 @@ export class ChamadoCreateComponent implements OnInit {
        && this.observacoes.valid && this.tecnico.valid && this.cliente.valid
   }
 
- 
+
 
 }
