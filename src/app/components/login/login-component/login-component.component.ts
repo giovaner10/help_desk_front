@@ -17,8 +17,8 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginComponentComponent implements OnInit {
 
   creds: Credenciais = {
-    email: 'valdir@mail.com',
-    senha: '123'
+    email: '',
+    senha: ''
   }
 
   email = new FormControl(null, Validators.email);
