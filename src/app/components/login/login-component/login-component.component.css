@@ -1,29 +1,54 @@
+.navbar-logo {
+   max-width: 250px;
+   display: flex;
+}
+
+.header .navbar-logo img {
+   height: auto;
+   max-width: 100%;
+}
+.header {
+   height: 60px;
+   background-color: #0F637A;
+   display: flex;
+   justify-content: center;
+}
+
+#logo {
+   margin: 0;
+}
+
 .container {
-    height: 100%;
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(37,97,207,1) 0%, rgba(0,212,255,1) 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+   height: 100%;
+   background: linear-gradient(-540deg, #0F637A 0%, #50bcd9 100%, #FFD900 0%);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding-top: 32px;
+   padding-bottom: 32px;
  }
  
  .form {
     width: 30rem;
     margin: auto;
+    height: 32rem;
     background-color: rgb(235, 235, 235);
-    padding: 4rem 1rem;
-    border-radius: 1rem;
+    padding: 2rem 1rem;
+    border-radius: 2rem;
+    margin-top: 0;
  }
  
- h1 {
+ h3 {
     width: 100%;
+    font-weight: 600;
+    font-size: 28.832px;
     text-align: center;
-    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;  
  }
  
  img {
     height: 15rem;
-    width: 100%;
-    margin: 1.5rem auto 1.5rem auto;
+    margin: 0.5rem auto 1.5rem 3.5rem;
  }
  
  .full-width {
@@ -31,9 +56,28 @@
  }
  
  button {
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
+    background: #0F637A;
+    border: 1px solid #0F637A;
+    font-weight: 600;
+    outline: none;
+    color: #fff;
+    border-radius: 20px;
+    padding: 3px 18px;
+    height: 50px;
+    font-size: 16px;
+    cursor: pointer;
  }
  
  mat-icon {
     opacity: .6;
  }
+
+ .footer {
+   height: 60px;
+   background-color: #0F637A;
+   display: flex;
+   justify-content: center;
+   color: #bac1c7;
+   padding: 15px 0 0px;
+}

@@ -1,9 +1,15 @@
+<header class="header">
+   <a class="navbar-logo" href="https://soulcodeacademy.teachble.com">
+      <img id="logo" src="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=height:60/https://file-uploads.teachablecdn.com/cafdd5e23ede4e52b0b3c293024bcbf1/a1de44835f9c41309464ba4c42d99284" alt="SoulCode Academy" srcset="https://process.fs.teachablecdn.com/ADNupMnWyR7kCWRvm76Laz/resize=height:120/https://file-uploads.teachablecdn.com/cafdd5e23ede4e52b0b3c293024bcbf1/a1de44835f9c41309464ba4c42d99284">
+   </a>
+</header>
+
 <div class="container">
    <form class="form mat-elevation-z8">
 
-      <h1>Help Desk - Dicas de um DEV</h1>
+      <h3>Student Success</h3>
 
-      <img src="assets/img/login-image.svg" alt="Help Desk - Dicas de um DEV">
+      <img src="assets/img/SoulCode.png" alt="Área de Login">
 
       <mat-form-field class="full-width" appearance="outline">
          <mat-label>E-mail</mat-label>
@@ -13,7 +19,7 @@
          [(ngModel)]="creds.email"
          name="email"
          matInput
-         placeholder="Ex. fulano@mail.com">
+         placeholder="pessoa@soulcode.com">
          <mat-icon matSuffix>email</mat-icon>
       </mat-form-field>
 
@@ -25,12 +31,11 @@
          [(ngModel)]="creds.senha"
          name="senha"
          type="password"
-         matInput
-         placeholder="Ex. 123">
+         matInput>
          <mat-icon matSuffix>password</mat-icon>
       </mat-form-field>
 
-      <button (click)="logar()" [disabled]="!validaCampos()" class="full-width mat-elevation-z4" mat-stroked-button color="primary">Login</button>
+      <button (click)="logar()" [disabled]="!validaCampos()" class="full-width mat-elevation-z4">Conecte-se</button>
    </form>
-
 </div>
+<footer class="footer">© SoulCode Academy 2022</footer>
