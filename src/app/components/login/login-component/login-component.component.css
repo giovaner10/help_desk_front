@@ -19,13 +19,13 @@
 }
 
 .container {
-   height: 100%;
+   height: 80%;
    background: linear-gradient(-540deg, #0F637A 0%, #50bcd9 100%, #FFD900 0%);
    display: flex;
    align-items: center;
    justify-content: center;
    padding-top: 32px;
-   padding-bottom: 32px;
+   padding-bottom: 0px;
  }
  
  .form {
